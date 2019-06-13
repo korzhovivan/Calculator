@@ -20,9 +20,21 @@ namespace Calculator
     /// </summary>
     public partial class MainWindow : Window
     {
+        double number = 0;
+        int numbers = 1;
+
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void NumButton_Click(object sender, RoutedEventArgs e)
+        {
+            Button btn = e.OriginalSource as Button;
+
+            number += Convert.ToDouble(btn.Content)*numbers;
+            txtBox_Value.Text = number.ToString();
+            number *= 10;
         }
     }
 }

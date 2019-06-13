@@ -12,3 +12,18 @@ c:\users\mak\documents\visual studio 2017\Projects\Calculator\Calculator\obj\Deb
 c:\users\mak\documents\visual studio 2017\Projects\Calculator\Calculator\obj\Debug\Calculator.csproj.GenerateResource.Cache
 c:\users\mak\documents\visual studio 2017\Projects\Calculator\Calculator\obj\Debug\Calculator.exe
 c:\users\mak\documents\visual studio 2017\Projects\Calculator\Calculator\obj\Debug\Calculator.pdb
+C:\Users\Korzhov Ivan\Desktop\Work_With_WPF_4\Calculator\bin\Debug\Calculator.exe.config
+C:\Users\Korzhov Ivan\Desktop\Work_With_WPF_4\Calculator\bin\Debug\Calculator.exe
+C:\Users\Korzhov Ivan\Desktop\Work_With_WPF_4\Calculator\bin\Debug\Calculator.pdb
+C:\Users\Korzhov Ivan\Desktop\Work_With_WPF_4\Calculator\obj\Debug\Calculator.csprojAssemblyReference.cache
+C:\Users\Korzhov Ivan\Desktop\Work_With_WPF_4\Calculator\obj\Debug\MainWindow.g.cs
+C:\Users\Korzhov Ivan\Desktop\Work_With_WPF_4\Calculator\obj\Debug\App.g.cs
+C:\Users\Korzhov Ivan\Desktop\Work_With_WPF_4\Calculator\obj\Debug\Calculator_MarkupCompile.cache
+C:\Users\Korzhov Ivan\Desktop\Work_With_WPF_4\Calculator\obj\Debug\Calculator_MarkupCompile.lref
+C:\Users\Korzhov Ivan\Desktop\Work_With_WPF_4\Calculator\obj\Debug\MainWindow.baml
+C:\Users\Korzhov Ivan\Desktop\Work_With_WPF_4\Calculator\obj\Debug\Calculator.g.resources
+C:\Users\Korzhov Ivan\Desktop\Work_With_WPF_4\Calculator\obj\Debug\Calculator.Properties.Resources.resources
+C:\Users\Korzhov Ivan\Desktop\Work_With_WPF_4\Calculator\obj\Debug\Calculator.csproj.GenerateResource.cache
+C:\Users\Korzhov Ivan\Desktop\Work_With_WPF_4\Calculator\obj\Debug\Calculator.csproj.CoreCompileInputs.cache
+C:\Users\Korzhov Ivan\Desktop\Work_With_WPF_4\Calculator\obj\Debug\Calculator.exe
+C:\Users\Korzhov Ivan\Desktop\Work_With_WPF_4\Calculator\obj\Debug\Calculator.pdb
