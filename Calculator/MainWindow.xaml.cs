@@ -20,8 +20,15 @@ namespace Calculator
     /// </summary>
     public partial class MainWindow : Window
     {
-        double number = 0;
-        int numbers = 1;
+
+        double currentNum = 0;
+        double firstNum = 0;
+
+        int action;
+
+        bool dot = false;
+        string currentStr = "";
+        
 
         public MainWindow()
         {
@@ -32,9 +39,71 @@ namespace Calculator
         {
             Button btn = e.OriginalSource as Button;
 
-            number += Convert.ToDouble(btn.Content)*numbers;
-            txtBox_Value.Text = number.ToString();
-            number *= 10;
+            currentStr += btn.Content;
+
+            txtBox_Value.Text = currentStr;
+            currentNum = Convert.ToDouble(currentStr);
+
+        }
+
+        private void Dot_Click(object sender, RoutedEventArgs e)
+        {
+            if (!dot)
+            {
+                currentStr += ",";
+                txtBox_Value.Text += ",";
+                dot = true;
+            }
+        }
+
+        private void Devide_Click(object sender, RoutedEventArgs e)
+        {
+            txtBox_Top.Text = currentStr + " /";
+            currentStr = "";
+            dot = false;
+            firstNum = currentNum;
+            action = 1;
+        }
+
+        private void Multyply_Click(object sender, RoutedEventArgs e)
+        {
+            txtBox_Top.Text = currentStr + " *";
+            currentStr = "";
+            dot = false;
+            firstNum = currentNum;
+            action = 2;
+        }
+
+        private void Minus_Click(object sender, RoutedEventArgs e)
+        {
+            txtBox_Top.Text = currentStr + " -";
+            currentStr = "";
+            dot = false;
+            firstNum = currentNum;
+            action = 3;
+        }
+
+        private void Plus_Click(object sender, RoutedEventArgs e)
+        {
+            txtBox_Top.Text = currentStr + " -";
+            currentStr = "";
+            dot = false;
+            firstNum = currentNum;
+            action = 3;
+        }
+
+        private void Equally_Click(object sender, RoutedEventArgs e)
+        {
+            txtBox_Top.Text = "";
+
+            switch (action)
+            {
+                case 1: currentNum = firstNum / currentNum; break;
+                case 2: currentNum = firstNum * currentNum; break;
+                case 3: currentNum = firstNum - currentNum; break;
+                case 4: currentNum = firstNum + currentNum; break;
+            }
+            txtBox_Value.Text = currentNum.ToString();
         }
     }
 }
