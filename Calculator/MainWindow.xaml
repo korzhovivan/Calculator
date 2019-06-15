@@ -29,25 +29,25 @@
                 <ColumnDefinition></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <Button FontSize="20" Grid.Column="0" Grid.Row="0" FontWeight="Bold">CE</Button>
+            <Button  Click="Clear" FontSize="20" Grid.Column="0" Grid.Row="0" FontWeight="Bold">CE</Button>
             <Button FontSize="20" Grid.Column="1" Grid.Row="0" FontWeight="Bold">C</Button>
             <Button FontSize="20" Grid.Column="2" Grid.Row="0" FontWeight="Bold">&lt;</Button>
-            <Button Click="Devide_Click" FontSize="20" Grid.Column="3" Grid.Row="0" FontWeight="Bold">/</Button>
+            <Button Click="Do_Action" FontSize="20" Grid.Column="3" Grid.Row="0" FontWeight="Bold">/</Button>
 
             <Button Click="NumButton_Click" FontSize="20" Grid.Column="0" Grid.Row="1" FontWeight="Bold">7</Button>
             <Button Click="NumButton_Click" FontSize="20" Grid.Column="1" Grid.Row="1" FontWeight="Bold">8</Button>
             <Button Click="NumButton_Click" FontSize="20" Grid.Column="2" Grid.Row="1" FontWeight="Bold">9</Button>
-            <Button Click="Multyply_Click" FontSize="20" Grid.Column="3" Grid.Row="1" FontWeight="Bold">*</Button>
+            <Button Click="Do_Action" FontSize="20" Grid.Column="3" Grid.Row="1" FontWeight="Bold">*</Button>
 
             <Button Click="NumButton_Click" FontSize="20" Grid.Column="0" Grid.Row="2" FontWeight="Bold" Grid.RowSpan="2">4</Button>
             <Button Click="NumButton_Click" FontSize="20" Grid.Column="1" Grid.Row="2" FontWeight="Bold" Grid.RowSpan="2">5</Button>
             <Button Click="NumButton_Click" FontSize="20" Grid.Column="2" Grid.Row="2" FontWeight="Bold" Grid.RowSpan="2">6</Button>
-            <Button Click="Minus_Click" FontSize="20" Grid.Column="3" Grid.Row="2" FontWeight="Bold" Grid.RowSpan="2">-</Button>
+            <Button Click="Do_Action" FontSize="20" Grid.Column="3" Grid.Row="2" FontWeight="Bold" Grid.RowSpan="2">-</Button>
 
             <Button Click="NumButton_Click"  FontSize="20" Grid.Column="0" Grid.Row="4" FontWeight="Bold">1</Button>
             <Button Click="NumButton_Click" FontSize="20" Grid.Column="1" Grid.Row="4" FontWeight="Bold">2</Button>
             <Button Click="NumButton_Click" FontSize="20" Grid.Column="2" Grid.Row="4" FontWeight="Bold">3</Button>
-            <Button Click="Plus_Click" FontSize="20" Grid.Column="3" Grid.Row="4" FontWeight="Bold">+</Button>
+            <Button Click="Do_Action" FontSize="20" Grid.Column="3" Grid.Row="4" FontWeight="Bold">+</Button>
 
             <Button Click="Dot_Click" FontSize="20" Grid.Column="0" Grid.Row="5" FontWeight="Bold">.</Button>
             <Button Click="NumButton_Click" FontSize="20" Grid.Column="1" Grid.Row="5" FontWeight="Bold">0</Button>

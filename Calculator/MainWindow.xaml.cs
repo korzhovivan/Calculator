@@ -26,9 +26,12 @@ namespace Calculator
 
         int action;
 
-        bool dot = false;
         string currentStr = "";
-        
+
+        bool first_ation = false;
+        bool dot = false;
+        bool NoDouble_Equall = false;
+        bool NoDouble_Action = false;
 
         public MainWindow()
         {
@@ -43,7 +46,7 @@ namespace Calculator
 
             txtBox_Value.Text = currentStr;
             currentNum = Convert.ToDouble(currentStr);
-
+            NoDouble_Action = false;
         }
 
         private void Dot_Click(object sender, RoutedEventArgs e)
@@ -56,54 +59,86 @@ namespace Calculator
             }
         }
 
-        private void Devide_Click(object sender, RoutedEventArgs e)
-        {
-            txtBox_Top.Text = currentStr + " /";
-            currentStr = "";
-            dot = false;
-            firstNum = currentNum;
-            action = 1;
-        }
-
-        private void Multyply_Click(object sender, RoutedEventArgs e)
-        {
-            txtBox_Top.Text = currentStr + " *";
-            currentStr = "";
-            dot = false;
-            firstNum = currentNum;
-            action = 2;
-        }
-
-        private void Minus_Click(object sender, RoutedEventArgs e)
-        {
-            txtBox_Top.Text = currentStr + " -";
-            currentStr = "";
-            dot = false;
-            firstNum = currentNum;
-            action = 3;
-        }
-
-        private void Plus_Click(object sender, RoutedEventArgs e)
-        {
-            txtBox_Top.Text = currentStr + " -";
-            currentStr = "";
-            dot = false;
-            firstNum = currentNum;
-            action = 3;
-        }
-
         private void Equally_Click(object sender, RoutedEventArgs e)
         {
-            txtBox_Top.Text = "";
-
-            switch (action)
+            if (NoDouble_Equall)
             {
-                case 1: currentNum = firstNum / currentNum; break;
-                case 2: currentNum = firstNum * currentNum; break;
-                case 3: currentNum = firstNum - currentNum; break;
-                case 4: currentNum = firstNum + currentNum; break;
+                txtBox_Top.Text = "";
+
+                switch (action)
+                {
+                    case 1: currentNum = firstNum / currentNum; break;
+                    case 2: currentNum = firstNum * currentNum; break;
+                    case 3: currentNum = firstNum - currentNum; break;
+                    case 4: currentNum = firstNum + currentNum; break;
+                }
+                txtBox_Value.Text = currentNum.ToString();
+                currentStr = currentNum.ToString();
+                first_ation = false;
+                NoDouble_Equall = false;
+                NoDouble_Action = false;
+                action = 0;
+                firstNum = 0;
+
+                MessageBox.Show("currentNum: " + currentNum + "\n" + "currentStr: " + currentStr + "\n" + "firstNum: " + firstNum);
             }
-            txtBox_Value.Text = currentNum.ToString();
+        }
+
+        private void Do_Action(object sender, RoutedEventArgs e)
+        {
+           
+            if (!NoDouble_Action)
+            {
+                Button btn = e.OriginalSource as Button;
+                txtBox_Top.Text += currentNum.ToString() + " " + btn.Content;
+                if (!first_ation)
+                {
+                    firstNum = Convert.ToDouble(currentStr);
+
+                }
+                else
+                {
+                    switch (action)
+                    {
+                        case 1: currentNum = firstNum / currentNum; break;
+                        case 2: currentNum = firstNum * currentNum; break;
+                        case 3: currentNum = firstNum - currentNum; break;
+                        case 4: currentNum = firstNum + currentNum; break;
+                    }
+                    firstNum = currentNum;
+                }
+
+
+
+               
+
+                switch (btn.Content)
+                {
+                    case "/": action = 1; break;
+                    case "*": action = 2; break;
+                    case "-": action = 3; break;
+                    case "+": action = 4; break;
+                }
+
+               
+                currentStr = "";
+                dot = false;
+                first_ation = true;
+
+                NoDouble_Equall = true;
+                NoDouble_Action = true;
+            }
+            
+        }
+
+        private void Clear(object sender, RoutedEventArgs e)
+        {
+            currentStr = "";
+            currentNum = 0;
+            txtBox_Top.Text = "";
+            txtBox_Value.Text = "";
+            first_ation = false;
+            dot = false;
         }
     }
 }
