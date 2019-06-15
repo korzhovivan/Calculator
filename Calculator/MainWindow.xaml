@@ -29,9 +29,9 @@
                 <ColumnDefinition></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <Button  Click="Clear" FontSize="20" Grid.Column="0" Grid.Row="0" FontWeight="Bold">CE</Button>
-            <Button FontSize="20" Grid.Column="1" Grid.Row="0" FontWeight="Bold">C</Button>
-            <Button FontSize="20" Grid.Column="2" Grid.Row="0" FontWeight="Bold">&lt;</Button>
+            <Button Click="Clear_СE" FontSize="20" Grid.Column="0" Grid.Row="0" FontWeight="Bold">CE</Button>
+            <Button Click="Clear_С" FontSize="20" Grid.Column="1" Grid.Row="0" FontWeight="Bold">C</Button>
+            <Button Click="DelLast_Click" FontSize="20" Grid.Column="2" Grid.Row="0" FontWeight="Bold">&lt;</Button>
             <Button Click="Do_Action" FontSize="20" Grid.Column="3" Grid.Row="0" FontWeight="Bold">/</Button>
 
             <Button Click="NumButton_Click" FontSize="20" Grid.Column="0" Grid.Row="1" FontWeight="Bold">7</Button>

@@ -31,7 +31,7 @@ namespace Calculator
         bool first_ation = false;
         bool dot = false;
         bool NoDouble_Equall = false;
-        bool NoDouble_Action = false;
+        bool NoDouble_Action = true;
 
         public MainWindow()
         {
@@ -106,10 +106,6 @@ namespace Calculator
                     firstNum = currentNum;
                 }
 
-
-
-               
-
                 switch (btn.Content)
                 {
                     case "/": action = 1; break;
@@ -118,18 +114,27 @@ namespace Calculator
                     case "+": action = 4; break;
                 }
 
-               
                 currentStr = "";
                 dot = false;
                 first_ation = true;
 
                 NoDouble_Equall = true;
                 NoDouble_Action = true;
+
+                txtBox_Value.Text = firstNum.ToString();
             }
             
         }
 
-        private void Clear(object sender, RoutedEventArgs e)
+        private void Clear_СE(object sender, RoutedEventArgs e)
+        {
+            currentStr = "";
+            currentNum = 0;
+            txtBox_Value.Text = "";
+            NoDouble_Action = true;
+        }
+
+        private void Clear_С(object sender, RoutedEventArgs e)
         {
             currentStr = "";
             currentNum = 0;
@@ -137,6 +142,23 @@ namespace Calculator
             txtBox_Value.Text = "";
             first_ation = false;
             dot = false;
+        }
+
+        private void DelLast_Click(object sender, RoutedEventArgs e)
+        {
+            string str = txtBox_Value.Text;
+            if (str.Length <=1)
+            {
+                currentNum = 0;
+                txtBox_Value.Text = "";
+            }
+            else
+            {
+                str = str.Remove(str.Length - 1);
+                currentNum = Convert.ToDouble(str);
+                txtBox_Value.Text = str.ToString();
+            }
+            
         }
     }
 }
