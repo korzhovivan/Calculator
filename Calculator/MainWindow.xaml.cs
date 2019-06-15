@@ -79,8 +79,6 @@ namespace Calculator
                 NoDouble_Action = false;
                 action = 0;
                 firstNum = 0;
-
-                MessageBox.Show("currentNum: " + currentNum + "\n" + "currentStr: " + currentStr + "\n" + "firstNum: " + firstNum);
             }
         }
 
